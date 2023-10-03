@@ -1,14 +1,10 @@
-import axios from "axios";
 
-const Card = () => {
-  axios.get('http://127.0.0.1:3000/muscles', {
-    'Access-Control-Allow-Origin': '*'
-  })
-    .then(response => console.log(response.data))
+
+const Card = ({muscle}) => {
   return (
-    <>
-      <h1>Hello world!</h1>
-    </>
+    <div className="muscle-card">
+      <h1>{muscle.name}</h1>
+    </div>
   )
 }
 

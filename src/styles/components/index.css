@@ -1,0 +1,20 @@
+.container {
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 6rem;
+  justify-items: center;
+}
+
+.muscle-card {
+  padding: 4px;
+  height: 15rem;
+  width: 12rem;
+  border: 1px solid red;
+  border-radius: 8px;
+}

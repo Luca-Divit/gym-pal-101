@@ -1,18 +1,26 @@
-import Head from 'next/head'
-import Navbar from '../components/Navbar'
-import Card from '../components/Card'
+import Navbar from '../components/Navbar';
+import Card from '../components/Card';
+import axios from "axios";
+import { useEffect, useState } from "react";
 
-export default function Home() {
+const Home = () => {
+  const [muscles, setMuscles] = useState([])
+
+  useEffect(() => {
+    axios.get('http://127.0.0.1:3000/muscles')
+      .then(response => setMuscles(response.data))
+  }, [])
+
   return (
     <div>
-      <Head>
-        <title>Gym Pal 101 | Excercise Library</title>
-        <meta name="description" content="Find excerises divided by muscles" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <Navbar />
-      <Card />
+      <div className='container'>
+        <div className="cards">
+          {muscles.map(m => <Card key={m.id} muscle={m}/> )}
+        </div>
+      </div>
     </div>
   )
 }
+
+export default Home;
