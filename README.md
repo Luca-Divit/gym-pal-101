@@ -2,7 +2,7 @@
   <img alt="Static Badge" src="https://img.shields.io/badge/node-16.13.1-green">
   <img alt="Static Badge" src="https://img.shields.io/badge/react-18.2.0-blue">
 </p>
-<h1 align="center">Front-end of the Rails-gym-API app</h1>
+<h1 align="center">Front-end of the <a href="https://github.com/Luca-Divit/rails-gym-api" alt="Rails-gym-API repo">Rails-gym-API app</a></h1>
 <h2 align="center">Built with 🛠️</h2>
 <p align="center">
   <a href="https://react.dev/"><img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="react logo"></a>
